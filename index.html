@@ -1,53 +1,65 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>The One True Wbsite</title>
-        <style>
-             blink {
-        font-size:60px;
-        animation: blinker 1.2s linear infinite;
-        color: #4199cc;
-       }
-      @keyframes blinker {  
-        50% { opacity: 0; }
-       }
-       body{
-           background-color:#e4eced;
-       }
-       .header {
-         padding: 60px;
-        text-align: center;
-        background: #00c1d9;
-        color: white;
-         font-size: 30px;
-         font-family:"Courier New", Courier, monospace;
-        }
-        img{
-           display: block;
-              margin-left: auto;
-              margin-right: auto;
-              width: 50%;
-            width:600px;
-            height:360px;
-        }
-        h1{
+<head>
+    <title>Portfolio</title>
+    <style>
+        .menu{
+            background-color:gray;
             text-align:center;
+            height:17px;
+            padding:10px;
+            
         }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <h1>The One True Website</h1>
-            <p>A Politicaly Centered, Scientifically Engineered, Social Experiment</p>
-       </div>
-    <img src="https://thewallpaper.co//wp-content/uploads/2016/01/cool-nature-photos-nature-wallpaper-for-samsung-hd-landscape-wallpapers-sky-flowers-windows-desktop-images-apple-background-images-best-nature-images-2560x1520.jpg">
-     <h1><blink>What a great picture, no?</blink></h1>
-     <h1>TOO BAD IT'S STOLEN</h1>
-     <hr>
-     <p style=text-align:center;>
-        For what is life without pain? What is joy without heartbreak?     
-    </p>
-         
-     </body>
-    
+        .menu a{
+            text-decoration:none;
+            color:white;
+            padding:10px;
+        }
+        .menu #link:hover{
+            background-color:white;
+            color:gray;
+        
+        }
+        
+         .dropdown {
+          position: relative;
+          display: inline-block;
+         }
+         .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color:gray;;
+          width:100%;
+          overflow:auto;
+        }
+        .dropdown-content a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        float:none;
+        }
+        .dropdown:hover .dropdown-content {display: block;}
+        body{
+            background-color:#3dbdbf;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="https://www.yahoo.com" id="link">Google</a>
+        <a >/</a>
+        <a href="https://www.msnbc.com" id="link">Dab</a>
+        <a>/</a>
+        <a href="https://www.google.com" id="link">Yahoo</a>
+        <a>/</a>
+        <div class="dropdown">
+          <a class="morelinks" id="link">More Links</a>
+              <div class="dropdown-content">
+                <a href="https://www.yahoo.com" id="link">Google</a>
+                <a href="https://www.msnbc.com" id="link">Dab</a>
+                <a href="https://www.apple.com" id="link">Pear</a>
+              </div>
+        </div>
+    </div>
+</body>
 </html>
