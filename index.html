@@ -1,65 +1,59 @@
 <!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Portfolio</title>
-    <style>
-        .menu{
-            background-color:gray;
-            text-align:center;
-            height:17px;
-            padding:10px;
+    <head>
+        <title>
+            Home
+        </title>
+        <style>
+            .navbar a, .dropdown div{
+                text-decoration:none;
+                color:white;
+                font-size:24px;
+                padding:16px;
+                display:inline-block;
+            }
+            .navbar{
+                list-style:none;
+                background-color:black;
+                overflow:hidden;
+                padding:0px;
+            }
+            .navbar li{
+                float:left;
+            }
+            body{
+                background-color:#cff5c9;
+            }
+            .navbar li:hover{
+                background-color:pink;
+                padding:0px;
+            }
+            .dropdown-content{
+                list-style:none;
+                padding:0;
+            }
+            .dropdown-content li{
+                float:none;
+            }
+        
             
-        }
-        .menu a{
-            text-decoration:none;
-            color:white;
-            padding:10px;
-        }
-        .menu #link:hover{
-            background-color:white;
-            color:gray;
-        
-        }
-        
-         .dropdown {
-          position: relative;
-          display: inline-block;
-         }
-         .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color:gray;;
-          width:100%;
-          overflow:auto;
-        }
-        .dropdown-content a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        float:none;
-        }
-        .dropdown:hover .dropdown-content {display: block;}
-        body{
-            background-color:#3dbdbf;
-        }
-    </style>
-</head>
-<body>
-    <div class="menu">
-        <a href="https://www.yahoo.com" id="link">Google</a>
-        <a >/</a>
-        <a href="https://www.msnbc.com" id="link">Dab</a>
-        <a>/</a>
-        <a href="https://www.google.com" id="link">Yahoo</a>
-        <a>/</a>
-        <div class="dropdown">
-          <a id="link">More Links</a>
-              <div class="dropdown-content">
-                <a href="https://www.theonion.com" id="link">Fake News</a>
-                <a href="https://www.bbc.co.uk" id="link">Comedy</a>
-                <a href="https://www.apple.com" id="link">Pear</a>
-              </div>
-        </div>
-    </div>
-</body>
+            
+        </style>
+    </head>
+    <body>
+        <ul class="navbar">
+            <li><a href="https://www.google">Bing</a></li>
+            <li><a href="http://www.awseducate.com">AWS</a></li>
+            <li><a href="https://www.yahoo.com">Google</a></li>
+            <li class="dropdown">
+                <div>More Links</div>
+                <ul class="dropdown-content">
+                    <li><a href="https://www.lego.com">Lego</a></li>
+                    <li><a href="https://www.youtube.com">Youtube</a></li>
+                    <li><a href="https://www.bing.com">Lego</a></li>
+                </ul>
+            </li>
+        </ul>
+    </body>
 </html>
