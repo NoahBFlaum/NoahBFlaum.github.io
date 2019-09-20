@@ -51,6 +51,7 @@
                 list-style:none;
                 display:none;
                 background-color:white;
+                padding:3px;
             }
             .cargol-content-one li{
                 border:1px;
@@ -59,14 +60,46 @@
             display:block;
             border:1px;
             }
-            .cargol:hover{
-            }
             .me{
                 background-color:white;
                 padding:10px;
                 font-size:20px;
                 color:black;
-                width:110px;
+                width:150px;
                 border-style:solid;
+                border-width:1px;
             }
-            
+            img{
+                width:200px;
+                height:270px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto
+            }
+            .wid{
+                width:400px;
+                height:200;
+            }
+            .yet{
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .mine{
+                width:286;
+                height:374;
+                float:right;
+            }
+            .y{
+                width:300px;
+                height:190px;
+            }
+            .t{
+                height:150px;
+                width:200px;
+            }
+            .l{
+                height:190px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
