@@ -80,6 +80,11 @@
                 width:400px;
                 height:200;
             }
+            .wid1{
+                width:400px;
+                height:250px;
+                transform:rotate(180deg);
+            }
             .yet{
                 margin-left:auto;
                 margin-right:auto;
@@ -99,11 +104,10 @@
                 width:200px;
             }
             .l{
-                height:190px;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                transform:rotate(270);
+                transform: rotate(270deg);
             }
             .cargol-content-two{
                 list-style:none;
