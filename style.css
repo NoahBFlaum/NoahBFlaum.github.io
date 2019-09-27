@@ -121,3 +121,34 @@
                 height:400px;
                 width:200pc;
             }
+            .cargol-content-three{
+                list-style:none;
+                display:none;
+                background-color:white;
+                padding:3px;
+            }
+            .cargol-content-three li{
+                border:1px;
+            }
+            .conclu:hover .cargol-content-three{
+            display:block;
+            border:1px;
+            }
+            .lee{
+                background-color:white;
+                padding:10px;
+                font-size:20px;
+                color:black;
+                width:200px;
+                border-style:solid;
+                border-width:1px;
+            }
+            .res{
+                text-align:center;
+            }
+            .rez{
+            }
+            .whit{
+                background-color:white;
+                padding:5px;
+            }
