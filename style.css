@@ -161,3 +161,28 @@
                 text-align:center;
                 color:white;
             }
+            .contel{
+                color:black;
+                text-align:center;
+                padding-left:5px;
+                padding-right:5px;
+            }
+            .solic{
+                text-align:center;
+            }
+            .pete{
+            text-decoration: none;
+            color:white;
+            }
+
+            a:visited {
+            text-decoration: none;
+            }
+
+            a:hover {
+            text-decoration: underline;
+            }
+
+            a:active {
+            text-decoration: underline;
+            }
