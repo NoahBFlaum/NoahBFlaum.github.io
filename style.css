@@ -118,7 +118,7 @@
                 height:250px;
             }
             .tre{
-                height:380px;
+                height:375px;
                 width:200pc;
             }
             .cargol-content-three{
@@ -185,4 +185,11 @@
 
             a:active {
             text-decoration: underline;
+            }
+            .blank{
+                list-style:none;
+
+            }
+            .blank:hover .blank{
+                background-color:black;
             }
