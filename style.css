@@ -193,3 +193,6 @@
             .blank:hover .blank{
                 background-color:black;
             }
+            .final{
+                text-align:left;
+            }
