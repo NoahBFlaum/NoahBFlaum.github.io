@@ -64,10 +64,14 @@
 		</tr>
 </table>
 <script>
-    var myValue = 5;
-    var myValue2 = 6;
-    alert(myValue2);
-    alert(myValue2/myValue);
+
+    var num = prompt("Please enter a radius");
+    num=parseInt(num);
+    var area = (Math.PI) * (Math.pow(num,2))
+    alert("The Area = " + area);
+    num++;
+    var area = (Math.PI) * (Math.pow(num,2))
+    alert("The New Area = " + area);
 </script>
     </body>
 </html>
