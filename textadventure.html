@@ -6,6 +6,31 @@
             Home
         </title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+        #container{
+            position: absolute;
+            top: 75px;
+            bottom: 0px;
+            left:0px;
+            right:0px;
+            background-color:green;
+        }
+        #left-pane{
+            width:56%;
+            height: 100%;
+            float:left;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background-color:red;
+        }
+         #right-pane{
+            width:44%;
+            height: 100%;
+            float:left;
+            background-color:blue;
+        }
+        </style>
     </head>
     <body>
         <ul class="navbar">
@@ -39,7 +64,14 @@
             </ul>
             <li><a>Noah B. Flaum</a></li>
         </ul>
-        <h1 class="header">Text Adventure</h1>
-        <hr>
+        <div id= 'container'>
+            <div id = 'left-pane'>
+            </div>
+
+            <div id= 'right=pane'>
+
+            </div>
+        </div>
+
     </body>
 </html>

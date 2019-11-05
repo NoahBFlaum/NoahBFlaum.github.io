@@ -19,7 +19,6 @@
             }
             .navbar li:hover{
                 background-color:pink;
-                padding:0px;
             }
             .dropdown-content{
                 list-style:none;
@@ -195,14 +194,4 @@
             }
             .wow{
                 color:white;
-            }
-            .blinking{
-            animation:blinkingText 4.5s infinite;
-            }
-            @keyframes blinkingText{
-                5%{     color: black;    }
-                49%{    color: transparent; }
-                50%{    color: transparent; }
-                99%{    color:transparent;  }
-                100%{   color: black;    }
             }
