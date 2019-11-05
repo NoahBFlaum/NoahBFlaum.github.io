@@ -15,7 +15,7 @@
             <li class="dropdown">
                 <div>Projects</div>
                 <ul class="dropdown-content">
-                    <li><a href="projectone.html">Project One</a></li>
+                    <li><a href="textadventure.html">Text Adventure</a></li>
                     <li><a href="projecttwo.html">Project Two</a></li>
                     <li><a href="projectthree.html">Project Three</a></li>
                 </ul>
@@ -73,6 +73,56 @@
     var area = (Math.PI) * (Math.pow(num,2))
     alert("The New Area = " + area);
 </script>
+<script>
+var SECRET = "noah.flaum";
+var PASS = "20074469";
 
+function start(){
+	println("Welcome to the Easy Math System.");
+	var attempt = 0;
+	while(true){
+    	while(true){
+    		var num = readLine("Please enter a username: ");
+    		if(num == SECRET || attempt > 2){
+    			break;
+
+    		}else{
+    		    println("Sorry, that did not mach any user in our database. Please try again.");
+    		    attempt++;
+    		}
+    	}
+    	if (attempt > 2){
+    	        break;
+    	    }
+    	while(true){
+    		var num = readLine("Please enter your password: ");
+    		if(num == PASS){
+    			break;
+    		}else{
+    		    println("Sorry, that did not mach the password for this username. Please try again.");
+    		}
+    	}
+    	var name = readLine("Please enter a temporary code name: ");
+
+    	println("Welcome " + name +".");
+
+    	var mult = readLine("Would you like to multiply? ");
+    	if(mult == "yes"){
+    	    var numOne = readInt("Of course, please enter your first number: ");
+    	    var numTwo = readInt("And a second: ");
+    	    var numMult = numOne * numTwo;
+    	    println("And your result sir: " + numMult);
+    	}else{
+    	    var somElse = readLine("Not a problem, would you like something else? ");
+    	}
+    	if(somElse == "yes"){
+    	    var elsa = readLine("Would you like to divide, add, or subtract?");
+    	}else{
+    	    break;
+    	}
+	}
+	println("You have been automatically logged out.");
+}
+</scrpt>
     </body>
 </html>
