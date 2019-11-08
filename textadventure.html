@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>
-            Home
+            Gerard's Quest
         </title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <style>
@@ -24,11 +24,73 @@
             justify-content:center;
             background-color:red;
         }
-         #right-pane{
+        #right-pane{
             width:44%;
             height: 100%;
             float:left;
             background-color:blue;
+        }
+        #storytext{
+            position: absolute;
+            top: 0px;
+            bottom: 175px;
+            left:56%;
+            right:0px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background-color:pink;
+        }
+        #choices{
+            position: absolute;
+            height: 175px;
+            bottom: 0px;
+            left:56%;
+            right:0px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background-color:yellow;
+        }
+        #b1{
+            display:inline-block;
+            background-color:gray;
+            color:white;
+            font-size: 16px;
+            padding:10px;
+            border-radius: 8px;
+            text-decoration:none;
+            margin: 10px;
+        }
+        #b2{
+            display:inline-block;
+            background-color:gray;
+            color:white;
+            font-size: 16px;
+            padding:10px;
+            border-radius: 8px;
+            text-decoration:none;
+            margin: 10px;
+        }
+        #b3{
+            display:inline-block;
+            background-color:gray;
+            color:white;
+            font-size: 16px;
+            padding:10px;
+            border-radius: 8px;
+            text-decoration:none;
+            margin: 10px;
+        }
+        #b4{
+            display:inline-block;
+            background-color:gray;
+            color:white;
+            font-size: 16px;
+            padding:10px;
+            border-radius: 8px;
+            text-decoration:none;
+            margin: 10px;
         }
         </style>
     </head>
@@ -68,8 +130,15 @@
             <div id = 'left-pane'>
             </div>
 
-            <div id= 'right=pane'>
-
+            <div id= 'right-pane'>
+                <div id = 'storytext'>
+                </div>
+                <div id = 'choices'>
+                    <a id ='b1' href='#'>Choice 1</a>
+                    <a id ='b2' href='#'>Choice 2</a>
+                    <a id ='b3' href='#'>Choice 3</a>
+                    <a id ='b4' href='#'>Choice 4</a>
+                </div>
             </div>
         </div>
 
