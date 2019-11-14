@@ -59,16 +59,18 @@
         }
         #ptext1{
             padding:5;
-            background-color:white;
-            color:red;
+            background-color:none;
+            color:gray;
             text-decoration:underline;
         }
         #storyimg{
-            max-height:97%;
             max-width:97%;
-            width:99%;
-            height:66%;
+            width:97%;
+            height:auto;
         }
+        body{
+            display: block;
+            }
         </style>
     </head>
     <body>
@@ -93,39 +95,56 @@
 
             <div id= 'right-pane'>
                 <div id = 'storytext'>
-                <p id='ptext1'>Gerard was once a humble man,</p>
-                <p id='ptext2'>Gerard was once a humble man,</p>
+                <p id='ptext1'>Gerard, a 36 year old man living in his mum’s wooden shack of a cottage in the empty serfdom fields of Lord Josiah the 12th’s barley field in northern England. </p>
+                <p id='ptext2'>Does Gerard wish to get out of his small cot and embrace the repetition of life?</p>
                 <p id='ptext3'>Gerard was once a humble man,</p>
                 <p id='ptext4'>Gerard was once a humble man,</p>
 
                 </div>
                 <div id = 'choices'>
-                    <a id ='b1' href='#'>Choice 1</a>
-                    <a id ='b2' href='#'>Choice 2</a>
-                    <a id ='b3' href='#'>Choice 3</a>
-                    <a id ='b4' href='#'>Choice 4</a>
+                    <a id ='b1' onclick = "bclick(1)" href='#'>Yes</a>
+                    <a id ='b2' onclick = "bclick(2)"href='#'>No</a>
+                    <a id ='b3' onclick = "bclick(3)"href='#'>Choice 3</a>
+                    <a id ='b4' onclick = "bclick(4)"href='#'>Choice 4</a>
                 </div>
             </div>
         </div>
         <script>
-            var pic= document.getElementById('storyimg');
+            var pic = document.getElementById('storyimg');
             var ptext1 = document.getElementById('ptext1');
+            var ptext2 = document.getElementById('ptext2');
+            var ptext3 = document.getElementById('ptext3');
+            var ptext4 = document.getElementById('ptext4');
             var b1 = document.getElementById('b1');
             var b2 = document.getElementById('b2');
+            var b3 = document.getElementById('b3');
+            var b4 = document.getElementById('b4');
             var state = "intro";
+            intro();
 
             function intro(){
                 pic.scr = "images/god.png";
-                ptext1.innerHTML("This is the intro to a story.");
-                ptext2.innerHTML("");
-                ptext3.innerHTML("");
-                ptext4.innerHTML("");
-                b1.innerHTML("Yes");
-                b2.innerHTML("No");
+                ptext1.innerHTML="This is the intro to a story.";
+                ptext2.innerHTML="";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="Yes";
+                b2.innerHTML="No";
                 b1.style.display = "block";
                 b2.style.display = "block";
                 b3.style.display = "none";
                 b4.style.display = "none";
+                state = "journey"
+            }
+            
+            function bclick(button){
+                if(state == "intro"){
+                    if(button == 1){
+                        journey();
+                    }else{
+                        //send somewhere else
+                    }
+                }
             }
         </script>
     </body>
