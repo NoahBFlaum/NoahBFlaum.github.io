@@ -13,7 +13,6 @@
             bottom: 0px;
             left:0px;
             right:0px;
-            background-color:green;
         }
         #left-pane{
             width:56%;
@@ -22,13 +21,11 @@
             display:flex;
             align-items:center;
             justify-content:center;
-            background-color:red;
         }
         #right-pane{
             width:44%;
             height: 100%;
             float:left;
-            background-color:blue;
         }
         #storytext{
             position: absolute;
@@ -36,10 +33,9 @@
             bottom: 175px;
             left:56%;
             right:0px;
-            display:flex;
             align-items:center;
+            text-align:center;
             justify-content:center;
-            background-color:pink;
         }
         #choices{
             position: absolute;
@@ -50,9 +46,8 @@
             display:flex;
             align-items:center;
             justify-content:center;
-            background-color:yellow;
         }
-        #b1{
+        #b1, #b2, #b3, #b4{
             display:inline-block;
             background-color:gray;
             color:white;
@@ -62,35 +57,17 @@
             text-decoration:none;
             margin: 10px;
         }
-        #b2{
-            display:inline-block;
-            background-color:gray;
-            color:white;
-            font-size: 16px;
-            padding:10px;
-            border-radius: 8px;
-            text-decoration:none;
-            margin: 10px;
+        #ptext1{
+            padding:5;
+            background-color:white;
+            color:red;
+            text-decoration:underline;
         }
-        #b3{
-            display:inline-block;
-            background-color:gray;
-            color:white;
-            font-size: 16px;
-            padding:10px;
-            border-radius: 8px;
-            text-decoration:none;
-            margin: 10px;
-        }
-        #b4{
-            display:inline-block;
-            background-color:gray;
-            color:white;
-            font-size: 16px;
-            padding:10px;
-            border-radius: 8px;
-            text-decoration:none;
-            margin: 10px;
+        #storyimg{
+            max-height:97%;
+            max-width:97%;
+            width:99%;
+            height:66%;
         }
         </style>
     </head>
@@ -108,30 +85,19 @@
                     <li><a href="projectthree.html">Project 3</a></li>
                 </ul>
             </li>
-            <ul class="blank">
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            <li class="blank"><a></a></li>
-            </ul>
-            <li><a>Noah B. Flaum</a></li>
         </ul>
         <div id= 'container'>
             <div id = 'left-pane'>
+                <img id='storyimg' src="images/glebin.jpg">
             </div>
 
             <div id= 'right-pane'>
                 <div id = 'storytext'>
+                <p id='ptext1'>Gerard was once a humble man,</p>
+                <p id='ptext2'>Gerard was once a humble man,</p>
+                <p id='ptext3'>Gerard was once a humble man,</p>
+                <p id='ptext4'>Gerard was once a humble man,</p>
+
                 </div>
                 <div id = 'choices'>
                     <a id ='b1' href='#'>Choice 1</a>
@@ -141,6 +107,26 @@
                 </div>
             </div>
         </div>
+        <script>
+            var pic= document.getElementById('storyimg');
+            var ptext1 = document.getElementById('ptext1');
+            var b1 = document.getElementById('b1');
+            var b2 = document.getElementById('b2');
+            var state = "intro";
 
+            function intro(){
+                pic.scr = "images/god.png";
+                ptext1.innerHTML("This is the intro to a story.");
+                ptext2.innerHTML("");
+                ptext3.innerHTML("");
+                ptext4.innerHTML("");
+                b1.innerHTML("Yes");
+                b2.innerHTML("No");
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+        </script>
     </body>
 </html>
