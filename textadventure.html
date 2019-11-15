@@ -64,8 +64,9 @@
         }
         #storyimg{
             max-width:97%;
-            width:97%;
+            width:auto;
             height:auto;
+            max-height:99%
         }
         body{
             display: block;
@@ -89,7 +90,7 @@
         </ul>
         <div id= 'container'>
             <div id = 'left-pane'>
-                <img id='storyimg' src="images/glebin.jpg">
+                <img id='storyimg' src="images/gerard.jpg">
             </div>
 
             <div id= 'right-pane'>
@@ -122,7 +123,6 @@
             intro();
 
             function intro(){
-                pic.scr = "images/neet.png";
                 ptext1.innerHTML="Gerard, a 36 year old man living in his mum’s wooden shack of a cottage in the empty serfdom fields of Lord Josiah the 12th’s barley field in northern England.";
                 ptext2.innerHTML="Does Gerard wish to get out of his small cot and embrace the repetition of his boring daily life?";
                 ptext3.innerHTML="";
@@ -133,15 +133,76 @@
                 b2.style.display = "block";
                 b3.style.display = "none";
                 b4.style.display = "none";
-                state = "journey"
             }
-            
+            function journey(){
+                pic.src = "images/crack.jpg";
+                ptext1.innerHTML="Gerard leaves his bed, but upon his feet touching the floor, he steps upon one of the numerous cracks thorughout the stone floor and emmediadtly hears a scream from his mother's room.";
+                ptext2.innerHTML="Should Gerard investigate?";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="Yes";
+                b2.innerHTML="No";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function firdeath(){
+                pic.src = "images/skelly.jpg";
+                ptext1.innerHTML="Gerard never leaves his bed and eventualy passes away from dehydration, and a week later his house is burned down in a viking raid, leaving Gerard and his home as nothing but ash.";
+                ptext2.innerHTML="";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function noMum(){
+                pic.src = "images/grif.jpg";
+                ptext1.innerHTML="Gerard walks out of his home and into the barley fields to work, in which he is promptly picked up by the claws of a mother griffin and taken to its nest to be devowered by its children.";
+                ptext2.innerHTML="";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function sample(){
+                pic.src = "images/blank.jpg";
+                ptext1.innerHTML="";
+                ptext2.innerHTML="";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
             function bclick(button){
                 if(state == "intro"){
                     if(button == 1){
                         journey();
+                        state = "journey";
                     }else{
-                        //send somewhere else
+                        firdeath();
+                        state = "firdeath";
+                    }
+                }
+                if(state == "journey"){
+                    if(button == 1){
+                        journey();
+                        state = "journey";
+                    }else{
+                        noMum();
+                        state = "noMum";
                     }
                 }
             }
