@@ -150,7 +150,7 @@
             function firdeath(){
                 pic.src = "images/skelly.jpg";
                 ptext1.innerHTML="Gerard never leaves his bed and eventualy passes away from dehydration, and a week later his house is burned down in a viking raid, leaving Gerard and his home as nothing but ash.";
-                ptext2.innerHTML="Procrastination becomes his mortal undoing.";
+                ptext2.innerHTML="Procrastination is our mortal undoing.";
                 ptext3.innerHTML="";
                 ptext4.innerHTML="";
                 b1.innerHTML="";
@@ -186,11 +186,12 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
+            
             function helpMum(){
-                pic.src = "images/blank.jpg";
+                pic.src = "images/log.jpg";
                 ptext1.innerHTML="Gerard traverses through betwix the rotting wooden beams of his house only to arrive at his mother's room in horror.";
                 ptext2.innerHTML="Gerard's crack stepping had seemingly caused his mother to snap her back, a truly grim sight, and his grandmother to perish, although whether that was because of the crack stepping or her old age one shall never know.";
-                ptext3.innerHTML="'GO SEEK THE TIME WIZAR' Gerard's mum spat through her clenched teeth, 'ONLY HE WILL HAVE THE AIL TO THIS TORTURE!''";
+                ptext3.innerHTML="'GO SEEK THE TIME WIZARD' Gerard's mum spat through her clenched teeth, 'ONLY HE WILL HAVE THE AIL TO THIS TORTURE!''";
                 ptext4.innerHTML="Should Gerard seek help in the Time Wizard?";
                 b1.innerHTML="Yes, swifly so!";
                 b4.innerHTML="No, I don't know her, and now nor does Gerard.";
@@ -200,7 +201,7 @@
                 b4.style.display = "block";
             }
             function findHelp(){
-                pic.src = "images/blank.jpg";
+                pic.src = "images/run.jpg";
                 ptext1.innerHTML="Gerard nods in aknowledgment at his mother and sprints out the door, determined to fix his apparent wrongdoing.";
                 ptext2.innerHTML="Whilst running about town inquiring as to this supposed 'Time Wizard' Gerard discovers that the wizard is the sole owner of the world's only 'Brace of Backening', a mysterious object said to heal the pains of any back, no mattter the severity.";
                 ptext3.innerHTML="Of this object Gerard was indeed wanting, and thus he thought on how he might aquire it.";
@@ -212,8 +213,8 @@
                 b3.style.display = "block";
                 b4.style.display = "none";
             }
-            function fogotten(){
-                pic.src = "images/blank.jpg";
+            function forgotten(){
+                pic.src = "images/field.jpg";
                 ptext1.innerHTML="Gerard forgets his own mother, and wonders out of his home, soon forgetting it as well. By nightfall he no longer remembered his own name, and by the next morning he had forgotten how to breathe.";
                 ptext2.innerHTML="The sins of the forgotten are sins nonetheless.";
                 ptext3.innerHTML="";
@@ -235,24 +236,42 @@
                         state = "firdeath";
                     }
                 }
-                if(state == "journey"){
+                else if(state == "firdeath"){
+                    if(button == 1){
+                        intro();
+                        state = "intro";
+                    }
+                }
+                else if(state == "journey"){
                     if(button == 2){
-                        findHelp();
-                        state = "findHelp";
+                        helpMum();
+                        state = "helpMum";
                     }
                     if(button == 3){
                         noMum();
                         state = "noMum";
                     }
                 }
-                if(state == "findHelp"){
+                else if(state == "noMum"){
                     if(button == 1){
-                        helpMum();
-                        state = "helpMum";
+                        intro();
+                        state = "intro";
+                    }
+                }
+                else if(state == "helpMum"){
+                    if(button == 1){
+                        findHelp();
+                        state = "findHelp";
                     }
                     if(button == 4){
-                        noMum();
-                        state = "fogotten";
+                        forgotten();
+                        state = "forgotten";
+                    }
+                }
+                else if(state == "forgotten"){
+                    if(button == 1){
+                        intro();
+                        state = "intro";
                     }
                 }
             }
