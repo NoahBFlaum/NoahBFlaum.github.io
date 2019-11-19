@@ -226,6 +226,58 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
+            function steal(){
+                pic.src = "images/ged.jpg";
+                ptext1.innerHTML="Gerard has decided, of his own free will, to steal the brace, but he must first be prepared, he must aquire some 'Boots of Muffling', the likes of which the shoe goblin who lived beneath his house might have.";
+                ptext2.innerHTML="Should Gerard bargain with the goblin? Or should he murder it in cold blood, allowing the burte animality of his inner demons to comsume him and aquire the boots through blunt force and pent up rage?";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="Bargain, Gerard's not an animal!";
+                b2.innerHTML="DESTROY";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function moral(){
+                pic.src = "images/froz.jpg";
+                ptext1.innerHTML="Upon Gerard's approach to the wizard's castle, his loud footsteps are heard, and he is frozen to death by the wizard's ice ray.";
+                ptext2.innerHTML="Only the cold of winter can put out the fire of determination.";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function destory(){
+                pic.src = "images/boots.jpg";
+                ptext1.innerHTML="Gerard storms into his home, tearing it apart in search of a weapon, and in his mothers dourery chest he find it, the Hol Rusty Fork Of Legends";
+                ptext2.innerHTML="";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function bargain(){
+                pic.src = "images/boots.jpg";
+                ptext1.innerHTML="Gerard makes a deal with the rotten goblin, and aquires the Boots of Slight Muffling in return for his left hand. A hand that may be helpful in the future.";
+                ptext2.innerHTML="And thus Gerard seal up his wound and continues on, his steps nearly inaudible in the morning snow.";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
             function bclick(button){
                 if(state == "intro"){
                     if(button == 1){
@@ -268,10 +320,14 @@
                         state = "forgotten";
                     }
                 }
-                else if(state == "forgotten"){
-                    if(button == 1){
-                        intro();
-                        state = "intro";
+                else if(state == "findHelp"){
+                    if(button == 2){
+                        steal();
+                        state = "steal";
+                    }
+                    if(button == 3){
+                        moral();
+                        state = "moral";
                     }
                 }
             }
