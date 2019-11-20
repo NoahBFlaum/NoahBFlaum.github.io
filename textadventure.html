@@ -172,7 +172,7 @@
                 b2.style.display = "none";
                 b3.style.display = "none";
                 b4.style.display = "none";
-            }
+            }//
             function sample(){
                 pic.src = "images/blank.jpg";
                 ptext1.innerHTML="";
@@ -186,7 +186,32 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
-            
+            function continue1(){
+                pic.src = "images/sale.jpg";
+                ptext1.innerHTML="Gerard traverses the Mild Mid-Western Plain, only to come across a hoard of Lesser Rude Salesmen. One of whom approaches Gerard, offering a deal of a device to fend off the Pesky Pocket Pinching Pixes.";
+                ptext2.innerHTML="Should Gerard ignore him? or make a deal?";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="Ignore"; 
+                b2.innerHTML="Deal";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function continue2(){
+                pic.src = "images/sale.jpg";
+                ptext1.innerHTML="Gerard traverses the Mild Mid-Western Plain, only to come across a hoard of Lesser Rude Salesmen. One of whom approaches Gerard, offering a deal of a device to fend off the Pesky Pocket Pinching Pixes.";
+                ptext2.innerHTML="Should Gerard ignore him? or make a deal?";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="Ignore";
+                b2.innerHTML="Deal";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
             function helpMum(){
                 pic.src = "images/log.jpg";
                 ptext1.innerHTML="Gerard traverses through betwix the rotting wooden beams of his house only to arrive at his mother's room in horror.";
@@ -252,15 +277,15 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
-            function destory(){
-                pic.src = "images/boots.jpg";
-                ptext1.innerHTML="Gerard storms into his home, tearing it apart in search of a weapon, and in his mothers dourery chest he find it, the Hol Rusty Fork Of Legends";
-                ptext2.innerHTML="";
-                ptext3.innerHTML="";
-                ptext4.innerHTML="";
-                b1.innerHTML="";
+            function destroy(){
+                pic.src = "images/fork.jpg";
+                ptext1.innerHTML="Gerard storms into his home, tearing it apart in search of a weapon, and in his mothers dourery chest he finds it, the Holy Rusty Fork Of Legends";
+                ptext2.innerHTML="Now armed with the mighty weapon, Gerard rushes into the golbin's den, slashing and stabbing so wildly and violently that both his arms dislocate and become whips by which Gerard swings.";
+                ptext3.innerHTML="The Shoe Goblin, caught unaware, is niched by the rusted steal, and wiht a deadly concotion of bubonic plague and syfilis marring the rusted metal, the goblin falls, slain instantly.";
+                ptext4.innerHTML="Gerard then goes and picks up the boots, a happy smile upon his face, but a deep sense of forboding within his heart.";
+                b1.innerHTML="Continue the quest";
                 b2.innerHTML="";
-                b1.style.display = "none";
+                b1.style.display = "block";
                 b2.style.display = "none";
                 b3.style.display = "none";
                 b4.style.display = "none";
@@ -269,11 +294,11 @@
                 pic.src = "images/boots.jpg";
                 ptext1.innerHTML="Gerard makes a deal with the rotten goblin, and aquires the Boots of Slight Muffling in return for his left hand. A hand that may be helpful in the future.";
                 ptext2.innerHTML="And thus Gerard seal up his wound and continues on, his steps nearly inaudible in the morning snow.";
-                ptext3.innerHTML="";
+                ptext3.innerHTML="Continue the quest";
                 ptext4.innerHTML="";
                 b1.innerHTML="";
                 b2.innerHTML="";
-                b1.style.display = "none";
+                b1.style.display = "block";
                 b2.style.display = "none";
                 b3.style.display = "none";
                 b4.style.display = "none";
@@ -299,7 +324,7 @@
                         helpMum();
                         state = "helpMum";
                     }
-                    if(button == 3){
+                    else if(button == 3){
                         noMum();
                         state = "noMum";
                     }
@@ -315,7 +340,7 @@
                         findHelp();
                         state = "findHelp";
                     }
-                    if(button == 4){
+                    else if(button == 4){
                         forgotten();
                         state = "forgotten";
                     }
@@ -325,11 +350,34 @@
                         steal();
                         state = "steal";
                     }
-                    if(button == 3){
+                    else if(button == 3){
                         moral();
                         state = "moral";
                     }
                 }
+                else if(state == "steal"){
+                    if(button == 1){
+                        bargain();
+                        state = "bargain";
+                    }
+                    else if(button == 2){
+                        destroy();
+                        state = "destroy";
+                    }
+                }
+                else if(state == "destroy"){
+                    if(button == 1){
+                        continue1();
+                        state = "continue1";
+                    }
+                }
+                else if(state == "bargain"){
+                    if(button == 1){
+                        continue2();
+                        state = "continue2";
+                    }
+                }
+
             }
         </script>
     </body>
