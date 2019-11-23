@@ -172,7 +172,7 @@
                 b2.style.display = "none";
                 b3.style.display = "none";
                 b4.style.display = "none";
-            }//
+            }
             function sample(){
                 pic.src = "images/blank.jpg";
                 ptext1.innerHTML="";
@@ -186,10 +186,10 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
-            function barg(){
-                pic.src = "images/blank.jpg";
-                ptext1.innerHTML="Gerard is swifly convinced to give up his left hand in return for the Mythical Flyswatter of Enhanced Wrist Strength, and is thus sent on his way towards the castle of the wizard.";
-                ptext2.innerHTML="";
+            function nope(){
+                pic.src = "images/nome.jpg";
+                ptext1.innerHTML="Gerard refuses, instead cutting the prince himself down. But alas, hours later, Gerard's mortal body no longer is capable of keepin up with the rage of his spirit, and it collapses, turning Grard's brain off forever.";
+                ptext2.innerHTML="War is Peace - Orwell, 1948";
                 ptext3.innerHTML="";
                 ptext4.innerHTML="";
                 b1.innerHTML="";
@@ -199,16 +199,81 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
-            function ig(){
-                pic.src = "images/blank.jpg";
-                ptext1.innerHTML="Gerard ignores the money hungry salesperson and runs to the clearing that onpened up into the wizard's castle.";
+            function halt(){
+                pic.src = "images/cast.png";
+                ptext1.innerHTML="Gerard accepts the Prince's help, and upon finding the entracne to the wizard's castle, the prince pockets the door off of the wall and flys away, allowing Gerard entrance into the foreboding castle.";
                 ptext2.innerHTML="";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="Continue";
+                b2.innerHTML="";
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function die(){
+                pic.src = "images/in.jpg";
+                ptext1.innerHTML="Gerard runs towards the pixies, but his fork has no effect, and instead of a vistory, Gerard is left itemless, and naked in the middle of an empty field.";
+                ptext2.innerHTML="To rot for his sins for eternity.";
                 ptext3.innerHTML="";
                 ptext4.innerHTML="";
                 b1.innerHTML="";
                 b2.innerHTML="";
                 b1.style.display = "none";
                 b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function kill(){
+                pic.src = "images/kin.png";
+                ptext1.innerHTML="Gerard begin slaughtering the pixes with his magically enforced flyswatter that he had insterted into his stump of an arm.";
+                ptext2.innerHTML="And soon, the bloodshed becomes too much and the Pixie Prince appears and offers his help in Gerard's endevours should he halt the massacre.";
+                ptext3.innerHTML="Should Gerard stop?";
+                ptext4.innerHTML="";
+                b1.innerHTML="NO";
+                b2.innerHTML="Sure";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function flee1(){
+                pic.src = "images/look.jpg";
+                ptext1.innerHTML="Gerard flees to the castle, narrowly avoiding the gaze of the evil pixies.";
+                ptext2.innerHTML="Gerard sees that the door has been reinforced with the enchantment of 'Encanced Enterior Design', and is thus unbreakable. Out of options, Gerard sits down and waits for something to happen. It never does";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function barg(){
+                pic.src = "images/pix.jpg";
+                ptext1.innerHTML="Gerard is swifly convinced to give up his left hand in return for the Mythical Flyswatter of Enhanced Wrist Strength, and is thus sent on his way towards the castle of the wizard.";
+                ptext2.innerHTML="But, his direct path towards the castle is blocked by a gigantic swarm of Pesky Pocket Pinching Pixies!";
+                ptext3.innerHTML="Should Gerard run or fight?";
+                ptext4.innerHTML="";
+                b1.innerHTML="Fight";
+                b2.innerHTML="Run";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function ig(){
+                pic.src = "images/pix.jpg";
+                ptext1.innerHTML="Gerard ignores the money hungry salesperson and runs to the clearing that onpened up into the wizard's castle.";
+                ptext2.innerHTML="But, his path is blocked by a gigantic swarm of Pesky Pocket Pinching Pixies!";
+                ptext3.innerHTML="Should he run or attack?";
+                ptext4.innerHTML="";
+                b1.innerHTML="Attack";
+                b2.innerHTML="Run";
+                b1.style.display = "block";
+                b2.style.display = "block";
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
@@ -320,9 +385,9 @@
                 pic.src = "images/boots.jpg";
                 ptext1.innerHTML="Gerard makes a deal with the rotten goblin, and aquires the Boots of Slight Muffling in return for his left hand. A hand that may be helpful in the future.";
                 ptext2.innerHTML="And thus Gerard seal up his wound and continues on, his steps nearly inaudible in the morning snow.";
-                ptext3.innerHTML="Continue the quest";
+                ptext3.innerHTML="";
                 ptext4.innerHTML="";
-                b1.innerHTML="";
+                b1.innerHTML="Continue the quest";
                 b2.innerHTML="";
                 b1.style.display = "block";
                 b2.style.display = "none";
@@ -405,22 +470,52 @@
                 }
                 else if(state == "continue1"){
                     if(button == 2){
-                        bargain();
+                        barg();
                         state = "barg";
                     }
                     else if(button == 1){
-                        destroy();
+                        ig();
                         state = "ig";
                     }
                 }
                 else if(state == "continue2"){
                     if(button == 2){
-                        bargain();
+                        barg();
                         state = "barg";
                     }
                     else if(button == 1){
-                        destroy();
+                        ig();
                         state = "ig";
+                    }
+                }
+                else if(state == "barg"){
+                    if(button == 1){
+                        kill();
+                        state = "kill";
+                    }
+                    else if(buton == 2){
+                        flee1();
+                        state = "flee1";
+                    }
+                }
+                else if(state == "ig"){
+                    if(button == 1){
+                        die();
+                        state = "die";
+                    }
+                    if(buton == 2){
+                        flee1();
+                        state = "flee1";
+                    }
+                }
+                else if(state == "kill"){
+                    if(button == 1){
+                        nope();
+                        state = "nope";
+                    }
+                    if(buton == 2){
+                        halt();
+                        state = "halt";
                     }
                 }
             }
