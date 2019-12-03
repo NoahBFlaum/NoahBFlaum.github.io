@@ -198,3 +198,13 @@
                 margin-right:auto;
                 width:80%;
             }
+            .nameofme{
+                text-align:center;
+                font-size:45px;
+                color:black;
+                border-width:1px;
+                padding:3px;
+                font-style:italic;
+                font-family:georgia;
+                font-weight:bold;
+            }
