@@ -81,6 +81,7 @@
                 background-color:#c6c7c5;
             }
             .mine{
+                margin-top:73px;
                 width:250;
                 float:right;
                 transform:rotate(270deg);
