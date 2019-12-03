@@ -67,6 +67,7 @@
                 border-style:solid;
                 border-width:1px;
                 margin-right:auto;
+
             }
             img{
                 height:270px;
@@ -95,10 +96,6 @@
             }
             .cargol-content-two li{
                 border:1px;
-            }
-            .cargol-un:hover .cargol-content-two{
-            display:block;
-            border:1px;
             }
             .tea{
                 background-color:white;
@@ -196,4 +193,8 @@
             }
             .wow{
                 color:white;
+            }
+            .left{
+                margin-right:auto;
+                width:70%;
             }
