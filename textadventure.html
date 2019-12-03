@@ -238,19 +238,7 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
-            function flee1(){
-                pic.src = "images/look.jpg";
-                ptext1.innerHTML="Gerard flees to the castle, narrowly avoiding the gaze of the evil pixies.";
-                ptext2.innerHTML="Gerard sees that the door has been reinforced with the enchantment of 'Encanced Enterior Design', and is thus unbreakable. Out of options, Gerard sits down and waits for something to happen. It never does";
-                ptext3.innerHTML="";
-                ptext4.innerHTML="";
-                b1.innerHTML="";
-                b2.innerHTML="";
-                b1.style.display = "none";
-                b2.style.display = "none";
-                b3.style.display = "none";
-                b4.style.display = "none";
-            }
+            
             function barg(){
                 pic.src = "images/pix.jpg";
                 ptext1.innerHTML="Gerard is swifly convinced to give up his left hand in return for the Mythical Flyswatter of Enhanced Wrist Strength, and is thus sent on his way towards the castle of the wizard.";
@@ -284,19 +272,6 @@
                 ptext3.innerHTML="";
                 ptext4.innerHTML="";
                 b1.innerHTML="Ignore"; 
-                b2.innerHTML="Deal";
-                b1.style.display = "block";
-                b2.style.display = "block";
-                b3.style.display = "none";
-                b4.style.display = "none";
-            }
-            function continue2(){
-                pic.src = "images/sale.jpg";
-                ptext1.innerHTML="Gerard traverses the Mild Mid-Western Plain, only to come across a hoard of Lesser Rude Salesmen. One of whom approaches Gerard, offering a deal of a device to fend off the Pesky Pocket Pinching Pixes.";
-                ptext2.innerHTML="Should Gerard ignore him? or make a deal?";
-                ptext3.innerHTML="";
-                ptext4.innerHTML="";
-                b1.innerHTML="Ignore";
                 b2.innerHTML="Deal";
                 b1.style.display = "block";
                 b2.style.display = "block";
@@ -394,6 +369,19 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
+            function flee(){
+                pic.src = "images/kin.jpg";
+                ptext1.innerHTML="Gerard flees to the castle, narrowly avoiding the gaze of the evil pixies.";
+                ptext2.innerHTML="Gerard sees that the door has been reinforced with the enchantment of 'Encanced Enterior Design', and is thus unbreakable. Out of options, Gerard sits down and waits for something to happen. It never does";
+                ptext3.innerHTML="";
+                ptext4.innerHTML="";
+                b1.innerHTML="";
+                b2.innerHTML="";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
             function bclick(button){
                 if(state == "intro"){
                     if(button == 1){
@@ -464,21 +452,11 @@
                 }
                 else if(state == "bargain"){
                     if(button == 1){
-                        continue2();
-                        state = "continue2";
+                        continue1();
+                        state = "continue1";
                     }
                 }
                 else if(state == "continue1"){
-                    if(button == 2){
-                        barg();
-                        state = "barg";
-                    }
-                    else if(button == 1){
-                        ig();
-                        state = "ig";
-                    }
-                }
-                else if(state == "continue2"){
                     if(button == 2){
                         barg();
                         state = "barg";
@@ -494,8 +472,8 @@
                         state = "kill";
                     }
                     else if(buton == 2){
-                        flee1();
-                        state = "flee1";
+                        flee();
+                        state = "flee";
                     }
                 }
                 else if(state == "ig"){
@@ -504,8 +482,8 @@
                         state = "die";
                     }
                     if(buton == 2){
-                        flee1();
-                        state = "flee1";
+                        flee();
+                        state = "flee";
                     }
                 }
                 else if(state == "kill"){
