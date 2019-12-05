@@ -84,10 +84,9 @@
             }
             .mine{
                 margin-top:73px;
-                width:35%;
+                width:28%;
                 height:auto;
                 float:right;
-                max-height:1000px;
                 transform:rotate(270deg);
                 padding:5px;
             }
