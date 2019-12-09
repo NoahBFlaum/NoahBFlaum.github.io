@@ -201,6 +201,8 @@
                 width:80%;
             }
             .nameofme{
+                margin-right:auto;
+                margin-left:auto;
                 text-align:center;
                 font-size:50px;
                 color:black;
