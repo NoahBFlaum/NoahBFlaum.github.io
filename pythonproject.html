@@ -9,6 +9,16 @@
                 background-color:pink;
                 width: 100%;
             }
+            p.bordered{
+                border-style:groove;
+                background-color:white;
+                text-align:center;
+            }
+            .videonow{
+                margin-left:auto; 
+                margin-right:auto;
+                display:block;
+            }
 </style>
 
         <title>
@@ -34,12 +44,12 @@
         </ul>
         <h1 class="header">Project 2</h1>
         <hr>
-        <video width="600" height="300" controls>
+        <video class= "videonow" width="600" height="300"controls>
             <source src="pythonvid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video> 
         <br>
-        <p>This video shows a quick walkthrough of the banking system, starting with an example of the sign in. Then we go through a quick demonstration of the options of the program, namely the review balance, withdrawl and transfer oprions.</p>
+        <p class="bordered">This video displays a quick walkthrough of the banking system, starting with an example of the sign in. Then we go through a quick demonstration of the options of the program, namely the review balance, withdrawl and transfer oprions.</p>
         <br>
         <br>
         <iframe height="400px" width="100%" src="https://repl.it/@NoahFlaum/Landfried-Python-Project?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
